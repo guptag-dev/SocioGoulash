@@ -1,0 +1,110 @@
+SocioGoulash
+SocioGoulash, is a mashup for getting updates from Google Buzz, Twitter and Various RSS feeds.
+
+Features 
+It provides various functionalities like
+1.  Get your Buzz, Tweets and Feeds.
+2.  Tweet, retweet, reply and direct reply.
+3.  SMS notification on new tweets and Buzz.
+4.  Tweet by SMS and voice
+5.  Theme Support with save as default theme option.
+
+Configuration
+1.  Install Sociogoulash.air file using AIR 2.0 Beta 2.
+2.  SMS Notification Configuration
+When SMS notification is enabled you have to mention path of SMSWebService in SocioGoulash.conf file in ProgramFiles/SocioGoulas/Assets. If this webservice runs on  local server then it will ask for path of tomcat otherwise it will connect to remote web service.
+a.  Tomcat Configuration
+Install Tomcat and if you are behind the proxy add following line in catalina.conf file :
+https.proxyHost=<proxyHost>
+https.proxyPort=<proxyPort>
+b.  Notification Web Service Configuration
+Unzip SMSWebService.zip in WebApps folder of tomcat. For testing purpose I have used configuration file with my account details to change them(If You Want) perform following changes
+•   Add Ribbit Application Configuration to ribbit.config file in SMSWebService/Web.INF/classes/.
+•   Change Your username and password in sendSMS.jsp file as parameter of login() function.
+
+
+
+
+
+Innovation
+1.  First Desktop Client For BUZZ.
+2.  Automatic URL Shortening.
+3.  SMS Notification Using Ribbit Platform.
+4.  System Taskbar integration.
+5.  System Notification Integration.
+6.  Automatic Apache Tomcat Starting on enabling SMS notification.
+7.  Chromeless UserInterface.
+8.  Used MVC Pattern.
+9.  Theme Support with save as default theme option.
+10. Observer Pattern(Using events).
+11. Automatic Background fetching from Twitter configuration.
+12. Automatic Mass Storage Device Detection and tweet data transfer into the device.
+
+
+
+
+Ribbit Features :
+1.  SMS notification on new tweets/buzz.
+2.  Tweet by SMS.
+3.  Voice to text conversion for tweet by voice.
+
+Air 2.0 features used   
+1.  Automatic Mass Storage Detection.
+2.  Native Process API calling.
+3.  Open Document API.
+4.  3 D rotation.
+5.  Used Content Background color.
+
+TO Dos 
+1.  Full Functional Buzz Integration once API is released.
+2.  Conversion to a central application for Buzz, Twitter and Facebook.
+
+
+
+
+How to Use SocioGoulash
+Application have 4 Tabs   Settings,   My Buzz,   My Tweets,  My Feed.  
+ 
+Tabs : Default initial Ids and URLs for Buzz, Twitter and Feeds are used which can be changed using Settings Tab. 
+SMS Updates : If anyone want to get sms updates on his mobile then check the checkbox an enter the phone number for notifications. As explained if WebService mentioned in SocioGoulash.conf file is local then it will automatically start tomcat server.
+Theme : User can select Background, base and content background color and can save it as default them for next time.
+Lets Start with Twitter First
+Twitter
+Write twitter username in second text field and click Set Twitter Id button. Now it will be your twitterId untill you change it again.
+Click on the My Twitter Tab to see all the tweets :
+ 
+Once Switched to the Twitter Panel it will ask for the twitter user credentials.
+ 
+
+ 
+Using Twitter Panel you can tweet, Retweet and reply by clicking respective buttons as shown in snapshot. You can check all replies and direct messages sent to you.
+For Tweet We have implemented automated URL shortening, like as shown I am tweeting “SocioGoulash completed SMS and URL shortning  http://itbhu.ac.in/codefest/event.php?eid=1”.
+ 
+ 
+And when tweeted it got converted to “SocioGoulash completed SMS and URL shortning http://ur.ly/7abW” and uger will get a system notification for the same and SMS (If configured) also.
+
+Buzz
+Set buzz id on settings panel
+ 
+Lets check the My Buzz tab
+ 
+On the top of the tab it shows the progress bar.
+You can click on show details buttons for all comments received on you buzz.
+Now to check If its getting new updates or not, Lets Start a new Buzz
+
+ 
+When SocioGoulash is minimized, then also it shows the notification that you have received a new buzz. Go to My Buzz tab in SocioGoulash to check new Buzz 
+ 
+Feeds
+Similary you can change Feed URL from settings tab. My Feeds tab look like 
+ 
+To get more details about a news double click on respective news.
+
+
+Some More Features :
+ Help : Read The Documentation Of SocioGoulash.
+ MiniMize : To Minimize to task bar.
+ Minimize to System Tray : Application will minimize to System Tray and by clicking on the icon you can show or close the application.
+ Save All the data to USB Device, If Device is not plugged in, it will show an alert to plug in the device.
+
+
